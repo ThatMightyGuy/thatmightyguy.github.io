@@ -1,6 +1,72 @@
-#weird-shape
+@font-face {
+    font-family: "Perfect DOS VGA 437";
+    src: url("../fonts/Perfect\ DOS\ VGA\ 437.ttf");
+}
+html, body
 {
-    background: black;
-    height: 10vh;
-    width: 100vw;
+    margin: 0;
+    height: 100%;
+}
+body
+{
+    background: darkblue;
+    font-family: "Perfect DOS VGA 437", monospace;
+    font-size: larger;
+    letter-spacing: -1px;
+
+}
+@keyframes gradientSweep
+{
+    from {
+        background-position-x: 0%;
+
+    }
+    to {
+        background-position-x: -200%;
+
+    }
+}
+#gradient
+{
+    color: white;
+    background: repeating-linear-gradient(to right, black, blue, black);
+    background-size: 200%;
+    animation: gradientSweep 4s linear 0s infinite;
+    text-align: center;
+}
+p
+{
+    margin: 0;
+    padding: 0.1em;
+}
+.content-container
+{
+    padding: 0.5em;
+    height: 100%;
+}
+#content
+{
+    background: darkgray;
+}
+.tab-container
+{
+    padding: 0.5em;
+    
+}
+hr
+{
+    border: 0.075em solid darkblue;
+}
+.grid
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 0.15em solid darkblue;
+}
+#sidebar
+{
+    box-sizing: border-box;
+    padding: 0.5em;
+    border-left: 0.15em solid darkblue;
+    color: darkblue;
 }
